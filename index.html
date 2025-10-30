@@ -8,30 +8,50 @@
             href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css?v1.2" type="text/css" media="all" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="style.css?v1.5" type="text/css" media="all" />
     </head>
     <body>
         <!-- Floating background hearts (decorative) -->
         <div id="floatingHearts" class="floating-hearts" aria-hidden="true"></div>
-        <!-- Sidebar -->
+        <!-- Sidebar Navigation -->
         <div class="sidebar">
             <div class="menu-item" data-index="0">
-                <i data-feather="home" class="icon"></i
-                ><span class="label">Home</span>
+                <i data-feather="home" class="icon"></i>
+                <span class="label">Welcome</span>
             </div>
             <div class="menu-item" data-index="1">
-                <i data-feather="search" class="icon"></i
-                ><span class="label">Cari</span>
+                <i data-feather="user" class="icon"></i>
+                <span class="label">About Her</span>
             </div>
             <div class="menu-item" data-index="2">
-                <i data-feather="heart" class="icon"></i
-                ><span class="label">Favorit</span>
+                <i data-feather="heart" class="icon"></i>
+                <span class="label">Love Story</span>
             </div>
             <div class="menu-item" data-index="3">
-                <i data-feather="user" class="icon"></i
-                ><span class="label">Profil</span>
+                <i data-feather="image" class="icon"></i>
+                <span class="label">Gallery</span>
             </div>
-            <div class="toggle-theme" id="themeToggle">💜</div>
+            <div class="menu-item" data-index="4">
+                <i data-feather="message-circle" class="icon"></i>
+                <span class="label">Chat</span>
+            </div>
+            <div class="menu-item" data-index="5">
+                <i data-feather="star" class="icon"></i>
+                <span class="label">Stargazing</span>
+            </div>
+            <div class="menu-item" data-index="6">
+                <i data-feather="moon" class="icon"></i>
+                <span class="label">Promise</span>
+            </div>
+            <div class="menu-divider"></div>
+            <div class="theme-toggle" id="themeToggle">
+                <i data-feather="moon" class="icon theme-icon"></i>
+                <span class="label">Theme</span>
+            </div>
         </div>
 
         <!-- Horizontal Panels -->
@@ -53,7 +73,7 @@
             </div>
 
             <audio id="sweetMusic" loop>
-                <source src="sweet-song.mp3" type="audio/mpeg" />
+                <source src="lagu.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
 
@@ -102,35 +122,49 @@
                 </div>
             </div>
 
-            <!-- Panel 3: Love Story & Fun Facts -->
+            <!-- Panel 3: Love Story & Fun Facts (reworked) -->
             <div class="panel" id="panel-love-story">
                 <div class="panel-content">
-                    <div class="love-quote">
-                        “Katanya, cinta itu kayak desain — kalau niat, hasilnya pasti indah.”
-                    </div>
+                    <!-- Left: Story and Quote -->
+                    <section class="love-story">
+                        <div class="love-quote">
+                            <span class="quote-mark">“</span>
+                            <span class="quote-text">Katanya, cinta itu kayak desain — kalau niat, hasilnya pasti indah.</span>
+                        </div>
 
-                    <div class="love-date">
-                        🌸 <strong>27 September 2025, pukul 11.57</strong> — 
-                        hari di mana ia resmi menjalin kisah dengan 
-                        <strong>Rajendra</strong>.
-                    </div>
+                        <div class="love-date">
+                            <strong>🌸 27 September 2025 — 11:57</strong>
+                            <div class="love-sub">Hari di mana ia resmi menjalin kisah dengan <strong>Rajendra</strong>.</div>
+                        </div>
 
-                    <div class="fun-facts">
-                        <h3>✨ Fun Facts About Ica ✨</h3>
-                        <ul>
-                            <li>💫 Gengsian (tapi cuma ke pacarnya sendiri 😆)</li>
-                            <li>☕ Pecinta <strong>matcha</strong> & <strong>kopi</strong></li>
-                            <li>🧀 Alergi keju, tapi anehnya suka juga 😅</li>
-                            <li>🍫 Kurang suka coklat</li>
-                            <li>🥟 Penggemar <strong>dimsum mentai</strong> & <strong>mie Gacoan</strong></li>
-                            <li>❌ Gak suka durian — katanya baunya aja udah pusing 🤢</li>
-                            <li>🎶 Gak suka lagu <em>“Blue – yung kai”</em> dan <em>“Mean It – Lauv”</em></li>
-                        </ul>
-                    </div>
+                        <div class="story-body">
+                            <p>
+                                Sejak hari itu, setiap momen sederhana berubah menjadi memori yang terbingkai.
+                                Kami menyimpan tawa, kopi pagi, dan catatan kecil yang membuat hari menjadi lebih hangat.
+                            </p>
+                            <p class="ending-quote">
+                                She’s a masterpiece in progress — and every detail matters.
+                            </p>
+                        </div>
+                    </section>
 
-                    <p class="ending-quote">
-                        “She’s a masterpiece in progress — and every detail matters.”
-                    </p>
+                    <!-- Right: Fun facts card -->
+                    <aside class="fun-facts">
+                        <h3>✨ Fun Facts About Ica</h3>
+                        <div class="div-li">
+                            <ul>
+                                <li>💫 Gengsian (tapi cuma ke pacarnya sendiri)</li>
+                                <li>☕ Pecinta <strong>matcha</strong> & <strong>kopi</strong></li>
+                                <li>🧀 Alergi keju (tetap suka)</li>
+                                <li>🍫 Kurang suka coklat</li>
+                            </ul>
+                            <ul>
+                                <li>🥟 Penggemar <strong>dimsum mentai</strong> & <strong>mie Gacoan</strong></li>
+                                <li>❌ Gak suka durian — katanya baunya bikin pusing</li>
+                                <li>🎶 Gak suka beberapa lagu tertentu — selera musik unik</li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </div>
 
@@ -139,55 +173,112 @@
                 <div class="gallery-container">
                     <div class="gallery-header">
                         <h2 class="gallery-title">Our Moments</h2>
-                        <p class="gallery-subtitle">Collection of our beautiful memories together</p>
+                        <p class="gallery-subtitle">A curated collection of little memories — swipe or click to view</p>
                     </div>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="path-to-image.jpg" alt="Gallery Image">
-                            <div class="gallery-overlay">
-                                <div class="gallery-caption">
-                                    <h3 class="gallery-title-small">Title</h3>
-                                    <p class="gallery-description">Description of the moment</p>
-                                    <div class="gallery-stats">
-                                        <span class="stat">📅 Date</span>
-                                        <span class="stat">📍 Location</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="gallery-category">Category</span>
-                        </div>
-                        <!-- Repeat gallery-item for more images -->
+
+                    <!-- Carousel -->
+                <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-cp1.jpg" alt="Moment 1" />
+                    <div class="caption">Pertama kali kita bertemu, di antara tawa yang belum saling kenal.</div>
                     </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-cp2.jpg" alt="Moment 2" />
+                    <div class="caption">Sore yang dingin, tapi matamu cukup hangat untuk disebut rumah.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-cp3.jpg" alt="Moment 3" />
+                    <div class="caption">Waktu berjalan, tapi senyum itu tetap di sana — tak tergantikan.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-cp5.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-cp6.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-cp7.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-kolase1.png" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-kolase2.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-kolase3.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-kolase4.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    <div class="swiper-slide">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica-kolase5.jpg" alt="Moment 4" />
+                    <div class="caption">Langit malam menjadi saksi, dan kopi jadi alasan kita bercerita.</div>
+                    </div>
+                    </div>
+                </div>
+
+
+                </div>
+
                 </div>
             </div>
 
-            <div id="panel-timeline" class="panel">
-                <div class="timeline-container">
-                    <div class="timeline-header">
-                        <h2 class="timeline-title">Our Journey</h2>
-                        <p class="timeline-subtitle">The story of our moments together</p>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-date">Date</div>
-                                <div class="timeline-dot"></div>
-                                <h3 class="timeline-title-small">Event Title</h3>
-                                <p class="timeline-description">Description of the event or moment</p>
-                                <img class="timeline-image" src="path-to-image.jpg" alt="Event Image">
-                                <div class="timeline-tags">
-                                    <span class="timeline-tag">Tag 1</span>
-                                    <span class="timeline-tag">Tag 2</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Repeat timeline-item for more events -->
-                    </div>
+            <div id="romantic-chat-panel" class="panel romantic-chat-panel">
+            <div class="chat-stage">
+                <header class="chat-header">
+                <div class="avatar">
+                    <img src="http://localhost/Rajendra-LP-Rajif/galeri-sira/assets/img-ica/ica8.jpg" alt="Icaa">
                 </div>
+                <div class="meta">
+                    <div class="name">💎 Icaa ✌️👐☝️</div>
+                    <div class="status">online • last seen 12:01</div>
+                </div>
+                <div class="mood">💜</div>
+                <button id="replayChat" class="replay-btn">🔄 Ulangi Chat</button>
+
+                </header>
+
+                <main id="chatWindow" class="chat-window">
+                <ul id="messages" class="messages"></ul>
+                </main>
+
+                <footer class="chat-footer">
+                <div class="typing" id="typingIndicator" aria-hidden="true">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+
+                <div class="fake-input">
+                    <input id="fakeInput" type="text" placeholder="Tampilan chat — bersiap nembak..." readonly />
+                    <button id="sendBtn" class="send-btn">💘</button>
+                </div>
+                </footer>
             </div>
-            <div class="panel">Panel 6</div>
-            <div class="panel">Panel 7</div>
-            <div class="panel">Panel 8</div>
+            </div>
+
+            <!-- Panel 6: Stargazing Memories -->
+            <div class="panel stargazing-panel" id="stargazing-panel">
+            <canvas id="starCanvas"></canvas>
+            <div id="loveQuote"></div>
+            <button id="replayStars">✨ Lihat Lagi</button>
+            </div>
+
+            <!-- Panel 7: The Promise -->
+            <div class="panel panel-7" id="panel-7">
+                <canvas id="stars"></canvas>
+                <div class="mountains"></div>
+                <div class="moon"></div>
+                <div class="text">“Dan saat mentari itu terbit, aku sadar... aku benar-benar jatuh padamu.”</div>
+            </div>
+
+            <!-- <div class="panel">Panel 8</div> -->
         </div>
 
         <!-- Navigation -->
@@ -200,6 +291,106 @@
         <div class="indicator" id="indicator"></div>
 
         <script src="https://unpkg.com/feather-icons"></script>
-        <script src="script.js?v1" type="text/javascript" charset="utf-8"></script>
+        <script src="script.js?v1.3" type="text/javascript" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+        <!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+<script>
+const swiper = new Swiper('.gallery-swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 60,
+  loop: true,
+  centeredSlides: true,
+  grabCursor: true,
+  allowTouchMove: true, // tetap bisa geser manual
+  speed: 4000, // makin tinggi = makin lambat dan halus
+  freeMode: {
+    enabled: true,
+    momentum: false, // biar gak berhenti di tengah
+  },
+  autoplay: {
+    delay: 0, // tanpa jeda
+    disableOnInteraction: false, // tetap jalan walau di-swipe
+  },
+  coverflowEffect: {
+    rotate: 35,
+    stretch: 0,
+    depth: 180,
+    modifier: 1,
+    slideShadows: true,
+  },
+  effect: 'coverflow',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  on: {
+    init: () => animateCaption(),
+    slideChangeTransitionStart: () => animateCaption(),
+  },
+});
+
+// GSAP animasi caption
+function animateCaption() {
+  gsap.to('.caption', { opacity: 0, y: 20, duration: 0.4 });
+  const activeCaption = document.querySelector('.swiper-slide-active .caption');
+  if (activeCaption) {
+    gsap.fromTo(
+      activeCaption,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8, delay: 0.3, ease: 'power3.out' }
+    );
+  }
+}
+
+window.addEventListener('load', animateCaption);
+</script>
+
+<script>
+  // GSAP muncul lembut waktu panel ini aktif
+  function animateRomanticPanel() {
+    gsap.fromTo(".title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+    gsap.fromTo(".subtitle", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power3.out" });
+    gsap.fromTo(".love-buttons button", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, stagger: 0.2, delay: 0.5, ease: "elastic.out(1, 0.5)" });
+  }
+
+  window.addEventListener("load", animateRomanticPanel);
+
+  // Event tombol kenangan
+  const btnMemory = document.getElementById("btnMemory");
+  const memoryBox = document.getElementById("memoryBox");
+  btnMemory.addEventListener("click", () => {
+    memoryBox.classList.toggle("show");
+    gsap.fromTo(".memory-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1 });
+  });
+
+  // Event tombol kejutan
+  const btnSurprise = document.getElementById("btnSurprise");
+  const surpriseBox = document.getElementById("surpriseBox");
+  btnSurprise.addEventListener("click", () => {
+    surpriseBox.classList.toggle("show");
+    gsap.fromTo(".surprise-photo", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.6)" });
+    gsap.fromTo(".surprise-text", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, delay: 0.4 });
+  });
+
+  // Efek gerak lembut saat kursor digerakkan
+  document.querySelector(".romantic-panel").addEventListener("mousemove", (e) => {
+    gsap.to(".floating-heart", {
+      x: (e.clientX - window.innerWidth / 2) / 25,
+      y: (e.clientY - window.innerHeight / 2) / 25,
+      duration: 1.5,
+      ease: "power1.out"
+    });
+  });
+</script>
+
+
+
     </body>
 </html>
