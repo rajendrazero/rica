@@ -1099,14 +1099,32 @@ canvas {
 @keyframes moonrise {
   0% {
     bottom: -150px;
+    left: 50%;
     opacity: 0;
   }
-  50% {
-    bottom: 50px;
+  20% {
+    bottom: 20px;
+    left: 49.5%;
+    opacity: 0.5;
+  }
+  40% {
+    bottom: 120px;
+    left: 50.2%;
+    opacity: 0.8;
+  }
+  60% {
+    bottom: 200px;
+    left: 49.8%;
+    opacity: 1;
+  }
+  80% {
+    bottom: 280px;
+    left: 50.1%;
     opacity: 1;
   }
   100% {
-    bottom: 120px;
+    bottom: 320px;
+    left: 50%;
     opacity: 1;
   }
 }
